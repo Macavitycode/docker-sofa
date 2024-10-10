@@ -1,0 +1,12 @@
+*
+
+!.gitignore
+!*.sh
+!*.md
+!Dockerfile
+
+!code/
+!code/*
+
+code/__pycache__
+code/SOFA*

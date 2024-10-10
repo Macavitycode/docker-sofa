@@ -1,0 +1,12 @@
+
+--- NEW SESSION: 08/09/2023 11:43:04 ---
+/finger.time = 2.33
+
+--- NEW SESSION: 08/09/2023 11:52:38 ---
+/finger/boxROI.box = 
+/finger/RestShapeSpringsForceField.springColor = 0 1 0 1
+
+--- NEW SESSION: 08/09/2023 11:53:56 ---
+/finger/boxROI.box = -10 0 -20 0 30 20
+/finger/boxROI.drawPoints = 1
+/finger/boxROI.drawEdges = 1
