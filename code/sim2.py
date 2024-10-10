@@ -64,6 +64,7 @@ def createScene(rootNode):
         value=0,
         triangles="@cavityMesh.triangles",
         valueType="pressure",
+        flipNormal=True,
     )
 
     cavity.addObject(
@@ -85,6 +86,7 @@ class FingerController(Sofa.Core.Controller):
 
         self.max_p = 1.5
         self.min_p = -10
+        self.delta_p = 0.001
 
     def onKeypressedEvent(self, e):
         pressureValue = self.pressureConstraint.value.value[0]
@@ -93,12 +95,12 @@ class FingerController(Sofa.Core.Controller):
         print("DEBUG: key pressed: ", e["key"])
 
         if e["key"] == Key.plus:
-            pressureValue += 0.01
+            pressureValue += self.delta_p
             if pressureValue > self.max_p:
                 pressureValue = self.max_p
 
         if e["key"] == Key.minus:
-            pressureValue -= 0.01
+            pressureValue -= self.delta_p
             if pressureValue < self.min_p:
                 pressureValue = self.min_p
 
